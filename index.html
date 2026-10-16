@@ -3,24 +3,24 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>разбор роблоксеров</title>
 <style>
-:root{color-scheme:dark;--bg:#04070f;--b1:#2d5bff;--b2:#6fa8ff;--cy:#38e8ff;--ink:#eef2ff;--mut:#8a96bf;--line:rgba(110,150,255,.22);--card:rgba(10,16,38,.78)}
+:root{color-scheme:dark;--bg:#04070f;--b1:#2d5bff;--b2:#6fa8ff;--cy:#5b8cff;--ink:#eef2ff;--mut:#8a96bf;--line:rgba(110,150,255,.22);--card:rgba(10,16,38,.78)}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:"Segoe UI",system-ui,Arial,sans-serif;overflow-x:hidden;text-transform:lowercase;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 78% 38%,rgba(45,91,255,.32),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(56,232,255,.1),transparent 70%)}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:radial-gradient(60% 50% at 78% 38%,rgba(45,91,255,.32),transparent 70%),radial-gradient(40% 40% at 10% 90%,rgba(45,91,255,.1),transparent 70%)}
 body::after{content:"";position:fixed;inset:-48px 0 0 0;z-index:-1;background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);background-size:64px 64px;opacity:.35;mask-image:radial-gradient(70% 60% at 60% 35%,#000,transparent);animation:drift 12s linear infinite}
 @keyframes drift{to{transform:translateY(64px)}}
 .wrap{width:100%;max-width:1480px;margin:0 auto;padding:0 clamp(20px,5vw,80px)}
 nav .wrap{display:flex;justify-content:space-between;align-items:center;height:76px;border-bottom:1px solid var(--line)}
 .logo{font-weight:800;letter-spacing:1px;color:var(--ink);text-decoration:none}
 .live{display:flex;align-items:center;gap:10px;color:var(--mut);font-size:14px}
-.live i{width:8px;height:8px;border-radius:50%;background:var(--cy);box-shadow:0 0 0 0 rgba(56,232,255,.7);animation:ping 2s infinite}
-@keyframes ping{70%{box-shadow:0 0 0 12px rgba(56,232,255,0)}100%{box-shadow:0 0 0 0 rgba(56,232,255,0)}}
+.live i{width:8px;height:8px;border-radius:50%;background:var(--cy);box-shadow:0 0 0 0 rgba(45,91,255,.7);animation:ping 2s infinite}
+@keyframes ping{70%{box-shadow:0 0 0 12px rgba(45,91,255,0)}100%{box-shadow:0 0 0 0 rgba(45,91,255,0)}}
 .hero .wrap{display:grid;grid-template-columns:1.15fr 1fr;align-items:center;min-height:calc(100vh - 76px);gap:20px}
 h1{font-size:clamp(48px,9vw,148px);line-height:.9;margin:0 0 44px;font-weight:900;letter-spacing:-.04em}
 h1 .ln{display:block;overflow:hidden;padding-bottom:.08em}
 h1 .ln span{display:block;transform:translateY(110%);animation:up 1s cubic-bezier(.2,.8,.2,1) forwards}
-h1 .ln:nth-child(2) span{animation-delay:.15s;background:linear-gradient(90deg,var(--b2),var(--b1) 60%,var(--cy));-webkit-background-clip:text;background-clip:text;color:transparent}
+h1 .ln:nth-child(2) span{animation-delay:.15s;background:linear-gradient(90deg,#7fa8ff,var(--b1) 60%,#7fa8ff);-webkit-background-clip:text;background-clip:text;color:transparent}
 @keyframes up{to{transform:none}}
 .btn{position:relative;display:inline-flex;align-items:center;gap:14px;overflow:hidden;background:var(--b1);color:#fff;border:0;border-radius:6px;padding:20px 34px;font-size:19px;font-weight:700;cursor:pointer;text-decoration:none;opacity:0;animation:fade .8s .5s forwards;transition:background .25s,box-shadow .25s;box-shadow:0 10px 40px rgba(45,91,255,.35)}
 .btn:hover{background:#3f6bff;box-shadow:0 14px 50px rgba(45,91,255,.6)}
@@ -45,14 +45,14 @@ form{background:var(--card);backdrop-filter:blur(12px);border:1px solid var(--li
 label{display:block;font-size:14px;color:var(--mut);margin:0 0 8px;letter-spacing:.5px}
 .f{margin-bottom:24px}
 input[type=text],textarea{width:100%;padding:15px 16px;border-radius:8px;border:1px solid var(--line);background:rgba(4,7,15,.8);color:var(--ink);font:inherit;font-size:16px;text-transform:lowercase;transition:border-color .25s,box-shadow .25s}
-input:focus,textarea:focus{outline:none;border-color:var(--b2);box-shadow:0 0 0 4px rgba(45,91,255,.22)}
+input:focus,textarea:focus{outline:none;border-color:var(--b2)}
 textarea{min-height:110px;resize:vertical}
 .hp{position:absolute;left:-9999px}
 form .btn{opacity:1;animation:none;margin-top:14px;width:100%;justify-content:center}
 form .btn::after{display:none}
 form .btn:disabled{opacity:.6;cursor:default}
 #msg{margin-top:20px;min-height:26px;font-weight:600}
-.ok{color:#5fd0ff}.err{color:#ff7b7b}
+.ok{color:#7fa8ff}.err{color:#ff7b7b}
 footer{border-top:1px solid var(--line);text-align:center;color:var(--mut);padding:36px 20px}
 a{color:var(--cy)}
 #admin{display:none;padding:60px 0;border-top:1px solid var(--line)}
@@ -61,14 +61,14 @@ a{color:var(--cy)}
 
 @property --a{syntax:"<angle>";inherits:false;initial-value:0deg}
 #cv{position:fixed;inset:0;z-index:-1;pointer-events:none}
-#glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;left:-999px;top:-999px;background:radial-gradient(circle,rgba(56,232,255,.13),transparent 65%);transform:translate(-50%,-50%)}
+#glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;left:-999px;top:-999px;background:radial-gradient(circle,rgba(45,91,255,.13),transparent 65%);transform:translate(-50%,-50%)}
 .btn{transition:background .25s,box-shadow .25s,transform .2s,translate .15s}
 .btn:hover{transform:translateY(-3px)}
 .btn:active{transform:scale(.96)}
 .rp{position:absolute;border-radius:50%;background:rgba(255,255,255,.45);transform:scale(0);animation:rp .6s ease-out forwards;pointer-events:none}
 @keyframes rp{to{transform:scale(4);opacity:0}}
-form{position:relative;border:1px solid transparent;background:linear-gradient(var(--card),var(--card)) padding-box,conic-gradient(from var(--a),rgba(110,150,255,.15),var(--cy),rgba(110,150,255,.15) 40%,var(--b1),rgba(110,150,255,.15)) border-box;animation:rot 8s linear infinite;transition:box-shadow .4s}
-form:focus-within{box-shadow:0 0 70px rgba(45,91,255,.35)}
+form{position:relative;border:1px solid var(--line);background:var(--card);transition:border-color .3s}
+form:focus-within{border-color:rgba(91,140,255,.5)}
 @keyframes rot{to{--a:360deg}}
 input[type=text]:hover,textarea:hover{border-color:rgba(111,168,255,.55)}
 label{transition:color .25s,transform .25s}
@@ -83,6 +83,35 @@ label{transition:color .25s,transform .25s}
 .stage{transition:transform .15s ease-out}
 h1 .ln:nth-child(2) span{background-size:200% 100%;animation:up 1s .15s cubic-bezier(.2,.8,.2,1) forwards,gs 6s 1.2s linear infinite}
 @keyframes gs{to{background-position:200% 0}}
+
+.ahead{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:22px}
+.acts{display:flex;gap:8px;flex-wrap:wrap}
+.ab{border:1px solid var(--line);background:rgba(10,16,38,.8);color:var(--ink);border-radius:8px;padding:10px 16px;cursor:pointer;font:inherit;font-size:14px;text-transform:lowercase;transition:.2s}
+.ab:hover{border-color:var(--b2);background:rgba(45,91,255,.2);transform:translateY(-2px)}
+.stats{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:22px}
+.st{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px;transition:.25s}
+.st:hover{transform:translateY(-3px);border-color:var(--b2)}
+.st b{display:block;font-size:34px;line-height:1.1}.st span{color:var(--mut);font-size:13px}
+.tools{display:flex;gap:12px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.tools #q{flex:1;min-width:220px;max-width:420px}
+.tabs{display:flex;gap:6px;flex-wrap:wrap}
+.tb{border:1px solid var(--line);background:transparent;color:var(--mut);border-radius:20px;padding:8px 16px;cursor:pointer;font:inherit;font-size:14px;text-transform:lowercase;transition:.2s}
+.tb.on,.tb:hover{background:var(--b1);color:#fff;border-color:var(--b1)}
+.it{position:relative;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--b1);border-radius:12px;padding:18px 20px;margin-bottom:12px;word-break:break-word;animation:pop .45s both;transition:transform .2s,border-color .2s}
+.it:hover{transform:translateX(4px)}
+.it.s-одобрена{border-left-color:#22c55e}.it.s-отклонена{border-left-color:#ef4444}.it.s-разобрано{border-left-color:#7fa8ff;opacity:.75}
+.it .top{display:flex;gap:10px;align-items:center;flex-wrap:wrap;margin-bottom:8px}
+.it .n{font-weight:800;font-size:18px}
+.bd{font-size:12px;padding:3px 10px;border-radius:20px;background:rgba(45,91,255,.25);color:#9db8ff}
+.s-одобрена .bd{background:rgba(34,197,94,.2);color:#4ade80}.s-отклонена .bd{background:rgba(239,68,68,.2);color:#f87171}
+.it .meta{color:var(--mut);font-size:14px;margin:3px 0}
+.it .ask{margin:10px 0;padding:10px 12px;background:rgba(4,7,15,.6);border-radius:8px;font-size:15px}
+.it .row{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.ac{border:0;border-radius:8px;padding:9px 16px;cursor:pointer;font:inherit;font-size:14px;font-weight:600;color:#fff;text-transform:lowercase;transition:.2s}
+.ac:hover{transform:translateY(-2px);filter:brightness(1.15)}
+.ac.g{background:#16a34a}.ac.r{background:#dc2626}.ac.b{background:var(--b1)}.ac.n{background:rgba(110,150,255,.18);color:var(--ink)}.ac.d{background:transparent;border:1px solid #dc2626;color:#f87171;margin-left:auto}
+.ac.d:hover{background:#dc2626;color:#fff}
+@media(max-width:700px){.stats{grid-template-columns:repeat(2,1fr)}.ac.d{margin-left:0}}
 </style></head><body>
 <canvas id="cv"></canvas><div id="glow"></div>
 <nav><div class="wrap"><a class="logo" href="#">@matey_rbx</a><div class="live"><i></i>заявки открыты</div></div></nav>
@@ -103,10 +132,16 @@ h1 .ln:nth-child(2) span{background-size:200% 100%;animation:up 1s .15s cubic-be
 <div id="msg"></div>
 </form></div></section>
 
-<section id="admin"><div class="wrap"><h2 style="font-size:36px;margin-bottom:20px">заявки</h2>
+<section id="admin"><div class="wrap">
+<div id="login"><div class="tag">/ админ</div><h2 style="font-size:40px;margin-bottom:22px">вход</h2>
 <input type="text" id="code" placeholder="код доступа" autocomplete="off" style="max-width:320px;margin-right:8px;display:inline-block">
-<button class="btn" id="lg" style="font-size:16px;padding:14px 24px;opacity:1;animation:none">войти</button>
-<div id="list" style="margin-top:20px"></div></div></section>
+<button class="btn" id="lg" style="font-size:16px;padding:14px 24px;opacity:1;animation:none">войти</button><div id="lerr" class="err" style="margin-top:12px"></div></div>
+<div id="panel" style="display:none">
+<div class="ahead"><h2 style="font-size:40px">заявки</h2><div class="acts"><button class="ab" id="rf">обновить</button><button class="ab" id="dr">удалить отклонённые</button><button class="ab" id="lo">выйти</button></div></div>
+<div class="stats" id="stats"></div>
+<div class="tools"><div class="tabs" id="tabs"></div><input type="text" id="q" placeholder="поиск по каналу, контакту, тексту"></div>
+<div id="list"></div></div>
+</div></section>
 <footer>by <a href="https://www.tiktok.com/@matey_rbx" target="_blank" rel="noopener">@matey_rbx</a></footer>
 
 <script>
@@ -151,22 +186,49 @@ const adm=$('admin');
 function openAdm(){adm.style.display='block';adm.scrollIntoView()}
 if(location.hash==='#admin')openAdm();
 addEventListener('hashchange',()=>{if(location.hash==='#admin')openAdm()});
-let CODE='';
+let CODE=sessionStorage.getItem('ac')||'',ITEMS=[],FT='все',QS='';
+const ST=s=>s==='выбрана'?'одобрена':s==='новая'?'новая':s;
+const TABS=['все','новая','одобрена','отклонена','разобрано'];
+const el=(t,c,x)=>{const e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e};
+const H=()=>({'x-admin':CODE,'Content-Type':'application/json'});
 async function load(){
- const L=$('list');
- try{const r=await fetch(API+'/list',{headers:{'x-admin':CODE}});
-  if(r.status===401){L.textContent='неверный код';return}
-  const d=await r.json();L.textContent='';
-  if(!d.items.length){L.textContent='пока пусто';return}
-  d.items.forEach(a=>{const w=document.createElement('div');
-   w.style.cssText='border:1px solid var(--line);border-radius:10px;padding:14px;margin-bottom:10px;background:var(--card);word-break:break-word';
-   const t=document.createElement('b');t.textContent='#'+a.n+' ['+a.status+'] '+a.url;
-   const m=document.createElement('div');m.style.color='var(--mut)';m.textContent='связь: '+a.contact+' | '+new Date(a.ts).toLocaleString('ru');
-   const q=document.createElement('div');q.textContent=a.ask||'';
-   w.append(t,m,q);
-   ['выбрана','разобрано','отклонена'].forEach(s=>{const b=document.createElement('button');b.textContent=s;
-    b.style.cssText='margin:8px 6px 0 0;border:1px solid var(--line);background:#04070f;color:var(--ink);border-radius:6px;padding:5px 10px;cursor:pointer';
-    b.onclick=async()=>{await fetch(API+'/status',{method:'POST',headers:{'x-admin':CODE,'Content-Type':'application/json'},body:JSON.stringify({key:a.key,status:s})});load()};w.append(b)});
-   L.append(w)})}catch(e){L.textContent='ошибка связи с сервером'}}
-$('lg').onclick=()=>{CODE=$('code').value.trim();load()};
+ try{const r=await fetch(API+'/list',{headers:H()});
+  if(r.status===401){sessionStorage.removeItem('ac');$('lerr').textContent='неверный код';$('login').style.display='block';$('panel').style.display='none';return}
+  ITEMS=(await r.json()).items.map(a=>({...a,status:ST(a.status)}));
+  sessionStorage.setItem('ac',CODE);$('login').style.display='none';$('panel').style.display='block';draw()}
+ catch(e){$('lerr').textContent='ошибка связи с сервером'}}
+function draw(){
+ const cnt=s=>s==='все'?ITEMS.length:ITEMS.filter(a=>a.status===s).length;
+ const S=$('stats');S.textContent='';
+ TABS.forEach(s=>{const c=el('div','st');c.append(el('b','',cnt(s)),el('span','',s==='все'?'всего':s));S.append(c)});
+ const T=$('tabs');T.textContent='';
+ TABS.forEach(s=>{const b=el('button','tb'+(s===FT?' on':''),s+' '+cnt(s));b.onclick=()=>{FT=s;draw()};T.append(b)});
+ const L=$('list');L.textContent='';
+ const q=QS.toLowerCase();
+ const rows=ITEMS.filter(a=>(FT==='все'||a.status===FT)&&(!q||[a.url,a.contact,a.ask,a.n].join(' ').toLowerCase().includes(q)));
+ if(!rows.length){L.append(el('div','meta','пока пусто'));return}
+ rows.forEach((a,i)=>{const w=el('div','it s-'+a.status);w.style.animationDelay=Math.min(i*40,400)+'ms';
+  const top=el('div','top');top.append(el('span','n','#'+a.n),el('span','bd',a.status));
+  const m1=el('div','meta');
+  if(/^https?:\/\//i.test(a.url)){const l=el('a','',a.url);l.href=a.url;l.target='_blank';l.rel='noopener';m1.append(l)}else m1.textContent=a.url;
+  const m2=el('div','meta','связь: '+a.contact+'  |  '+new Date(a.ts).toLocaleString('ru'));
+  w.append(top,m1,m2);
+  if(a.ask)w.append(el('div','ask',a.ask));
+  const row=el('div','row');
+  const set=async s=>{const old=a.status;a.status=s;draw();try{const r=await fetch(API+'/status',{method:'POST',headers:H(),body:JSON.stringify({key:a.key,status:s})});if(!r.ok)throw 0}catch(e){a.status=old;draw();alert('не сохранилось')}};
+  [['одобрить','g','одобрена'],['отклонить','r','отклонена'],['разобрано','b','разобрано'],['в новые','n','новая']].forEach(([t,c,s])=>{if(a.status!==s){const b=el('button','ac '+c,t);b.onclick=()=>set(s);row.append(b)}});
+  const cp=el('button','ac n','копировать контакт');cp.onclick=()=>{navigator.clipboard&&navigator.clipboard.writeText(a.contact);cp.textContent='скопировано';setTimeout(()=>cp.textContent='копировать контакт',1200)};row.append(cp);
+  const d=el('button','ac d','удалить');d.onclick=()=>del([a]);row.append(d);
+  w.append(row);L.append(w)})}
+async function del(arr){
+ if(!arr.length)return;
+ if(!confirm(arr.length===1?'удалить заявку #'+arr[0].n+'?':'удалить заявок: '+arr.length+'?'))return;
+ for(const a of arr){try{const r=await fetch(API+'/delete',{method:'POST',headers:H(),body:JSON.stringify({key:a.key})});if(r.ok)ITEMS=ITEMS.filter(x=>x.key!==a.key);else alert('не удалилось, обнови worker.js')}catch(e){alert('ошибка связи');break}}
+ draw()}
+$('lg').onclick=()=>{CODE=$('code').value.trim();$('lerr').textContent='';load()};
+$('code').addEventListener('keydown',e=>{if(e.key==='Enter')$('lg').click()});
+$('rf').onclick=load;$('lo').onclick=()=>{sessionStorage.removeItem('ac');CODE='';ITEMS=[];$('panel').style.display='none';$('login').style.display='block'};
+$('dr').onclick=()=>del(ITEMS.filter(a=>a.status==='отклонена'));
+$('q').oninput=e=>{QS=e.target.value;draw()};
+if(CODE&&location.hash==='#admin')load();
 </script></body></html>
